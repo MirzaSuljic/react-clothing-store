@@ -1,29 +1,56 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/logo.svg';
 import {Link} from 'react-router-dom';
 
 const Header = (props) => {
     return (
        <header className="header">
-           <div className="wrap">
-               <div className="logo">
-                   <Link to="/">
-                        <img src={Logo} alt="logo"></img>
-                   </Link>
-               </div>
-                <div className="callToActions">
+           <div className="ml-20">
+                <ul className="left-items">
+                    <li>
+                        <Link to="/women">
+                            Women
+                        </Link>
+                    </li>
+                    <li>
+                    <Link to="/men">
+                            Men
+                        </Link>
+                    </li>
+                    <li>
+                    <Link to="/sales">
+                            Sales
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+            <div className="logo">
+                <Link to="/">
+                    <img src={Logo} alt="logo"></img>
+                </Link>
+            </div>
+            <div className="mr-20">
+                <div className="right-items">
                     <ul>
                         <li>
                             <Link to="/registration">
-                                Register
+                                Contact
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/sign-in">
+                                Sign in
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/cart">
+                                Cart
                             </Link>
                         </li>
                     </ul>
-
                 </div>
-           </div>
-
+            </div>
        </header>
     );
 }

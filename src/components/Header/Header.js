@@ -1,15 +1,27 @@
 import React from 'react';
 import './Header.css';
 import Logo from '../../assets/logo.png';
+import {Link} from 'react-router-dom';
 
 const Header = (props) => {
     return (
        <header className="header">
            <div className="wrap">
                <div className="logo">
-                    <img src={Logo} alt="logo"></img>
+                   <Link to="/">
+                        <img src={Logo} alt="logo"></img>
+                   </Link>
                </div>
+                <div className="callToActions">
+                    <ul>
+                        <li>
+                            <Link to="/registration">
+                                Register
+                            </Link>
+                        </li>
+                    </ul>
 
+                </div>
            </div>
 
        </header>

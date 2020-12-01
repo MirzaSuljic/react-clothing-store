@@ -8,8 +8,6 @@ const Homepage = () => {
     return (
         <section className="homepage">
             <Directory/>
-            <Women/>
-            <Men/>
         </section>
     )
 };

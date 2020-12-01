@@ -4,12 +4,13 @@ import Homepage from './pages/Homepage/Homepage';
 import Registration from './pages/Registration/Registration';
 import {Switch, Route} from 'react-router-dom';
 import MainLayout from './Layouts/MainLayout'; 
+import CartLayout from './Layouts/CartLayout'; 
 import HomepageLayout from './Layouts/HomepageLayout';
 import Women from './pages/Women/Women';
 import Men from './pages/Men/Men';
 import Sale from './pages/Sale/Sale';
 import SignIn from './pages/SignIn/SignIn';
-import Cart from './pages/Cart/Cart';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -30,10 +31,10 @@ function App() {
               <SignIn/>
             </MainLayout>
           )}/>
-          <Route path="/cart" render={()=>(
-            <MainLayout>
-              <Cart/>
-            </MainLayout>
+          <Route path="/checkout" render={()=>(
+            <CartLayout>
+              <Checkout/>
+            </CartLayout>
           )}/>
            <Route path="/women" render={()=>(
             <MainLayout>

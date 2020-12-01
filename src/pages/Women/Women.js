@@ -14,28 +14,28 @@ class Women extends Component {
         return (
             <div> 
                 <span className="title">Women</span>
-            <div className="directory">
+            <div className="women">
            
             <div
-                className="item"
+                className="item-women"
                 style={{
                     backgroundImage:`url(${ShopWomen})`
                 }}>
             </div>
             <div
-                className="item"
+                className="item-women"
                 style={{
                     backgroundImage:`url(${ShopWomen})`
                 }}>
             </div>
             <div
-                className="item"
+                className="item-women"
                 style={{
                     backgroundImage:`url(${ShopWomen})`
                 }}>
             </div>
             <div
-                className="item"
+                className="item-women"
                 style={{
                     backgroundImage:`url(${ShopWomen})`
                 }}>

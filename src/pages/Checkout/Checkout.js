@@ -5,6 +5,22 @@ import {Link} from 'react-router-dom';
 import './Checkout.css';
 
 class Checkout extends Component {
+    state = {
+      email: '',
+      firstName: '',
+      lastName: '',
+      company : '',
+      address : '',
+      apartment : '',
+      postalCode : '',
+      city : '',
+      country : '',
+      phone : '',
+      };
+
+      addSubmit =()=>{
+          
+      }
     render(){
         return (
             <div className="checkout">
@@ -27,69 +43,54 @@ class Checkout extends Component {
                     </Link>
                 </div>
                 <section className="form-container">
-                    <form>
+                    <form onSubmit={this.addSubmit}>
                         <div className="input-container">
                             <div>
                                 <label for="email" >Contact Information</label>
                             </div>
                             <div>
-                                <input type="email" class="form-control " id="email " placeholder="Enter email address"  />
+                                <input type="email" className="form-control " email="email"  placeholder="Enter email address"  />
                             </div>
                         </div>
                         <div>
-                            <label for="personalNumber">Shipping address</label>
+                            <label for="shippingAddress">Shipping address</label>
                         </div>
                         <div className="inner-container">
                             <div className="left-side ">
-                                <input type="email" className="form-control" id="email" placeholder="Enter personal number" />
+                                <input type="text" className="form-control" firstName="firstName"  placeholder="First Name" />
                             </div>
                             <div class="right-side ">
-                                <input type="text " className="form-control " id="employeeNumber " placeholder="Enter employee number " />
+                                <input type="text " className="form-control " firstName="lastName"  placeholder="Last Name " />
                             </div>
                         </div>
                         <div className="input-container">
-                            <input type="email" class="form-control " id="email " placeholder="Enter email address"/>
+                            <input type="text" class="form-control " company="company"  placeholder="Company"/>
                         </div>
                         <div className="input-container">
-                            <input type="email" class="form-control " id="email " placeholder="Enter email address" />
+                            <input type="text" class="form-control " address="address"  placeholder="Address" />
                         
                         </div>
                         <div className="input-container">
-                            <input type="email" class="form-control " id="email " placeholder="Enter email address"  />
+                            <input type="text" class="form-control " apartment="apartment"  placeholder="Appartment"  />
                         </div>
                         <div className="inner-container">
                             <div className="left-side ">
-                                <input type="email" className="form-control" id="email" placeholder="Enter personal number" />
+                                <input type="text" className="form-control" postalCode="postalCode"  placeholder="Postal Code" />
                             </div>
                             <div class="right-side ">
-                                <input type="text " className="form-control " id="employeeNumber " placeholder="Enter employee number " />
+                                <input type="text " className="form-control" city="city"  placeholder="City " />
                             </div>
                         </div>
                         <div className="input-container">
-                            <input type="email" class="form-control " id="email " placeholder="Enter email address" />
+                            <input type="text" class="form-control " country="country"  placeholder="Country" />
                         </div>
                         <div className="input-container">
-                            <input type="email" class="form-control " id="email " placeholder="Enter email address" />
+                            <input type="text" class="form-control " phone="phone" placeholder="Phone" />
                         </div>
-                       
                         </form>
+
+                        <button type="submit">Submit</button>
                     </section>
-                {/* <div className="contacts">
-                    <form id="contact-form">
-                        <div>
-                            <label>Contact Information</label>
-                        </div>
-                        <div>
-                            <input 
-                            type="email"id="email"
-                            // value={this.state.email}
-                            placeholder="Email" 
-                            className="form-control"
-                            required 
-                            />
-                        </div>
-                    </form>
-                </div> */}
                 
             </div>
         )

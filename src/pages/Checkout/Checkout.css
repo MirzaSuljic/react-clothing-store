@@ -1,76 +1,94 @@
 .checkout {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 100vh;
+}
+
+.checkout-views {
+    flex: 2;
+    padding: 4em;
+    background-color: #F5F7F6;
+}
+
+.view-button {
+    float: right;
+    border: 0;
+    padding: 1em 5em;
+    background-color: #595959;
+    color: white;
+}
+
+.checkout-cart-info {
+    flex: 1;
+    padding: 4em;
 }
 
 .logo1 {
-    width: 66px;
-    height: 21px;
-    padding-top: 30px;
+    text-align: center;
 }
-.tab-links{
+
+.tab-links {
     display: flex;
-    padding-top: 70px;
-
-}
-.text-links {
-    font-size: 14px;
-    line-height: 16.94px;
-    color: #C4C4C4;
-
-}
-.mr-15 {
-    margin-right: 15px;
-}
-
-/* .form-control{
-    width: 650px;
-    height: 40px;
-    border-radius: 3px;
-    border: 1px solid #D9D9D9;
-} */
-
-/**********************************/
-.form-container {
-    width: 100%;
-    margin-bottom: 50px;
-    display: flex;
+    align-items: center;
     justify-content: center;
-}
-.form-container input {
-    font-size: 13px;
+    margin: 3em 0 5em 0;
 }
 
-.form-container input {
-    width: 650px;
-    height: 40px;
-    border-radius: 3px;
-    border: 1px solid #D9D9D9;
+.tab-links .text-links {
+    color: #c4c4c4;
 }
 
-.form-container input::placeholder {
-    font-size: 14px;
-    color: #FAFAFA;
-    font-weight: 400;
+.tab-links .tab-link-active {
+    color: #303030;
 }
 
-.inner-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 15px;
+.tab-links > * {
+    margin: 0 1em;
 }
-.left-side,
-.right-side {
+
+.cart-items {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #aaaaaa;
 }
 
-.left-side input,
-.right-side input {
-    width: 315px;
-    height: 40px;
-    border: 1px solid #D9D9D9;
-    border-radius: 3px;
+.cart-items li {
+    display: flex;
+    padding: .5em;
+}
+
+.cart-items li h3 {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.cart-item-image {
+    margin-right: 1em;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.checkout-totals {
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.checkout-totals > div {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-totals > div div:first-child {
+    font-weight: bold;
+}
+
+.checkout-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+    font-weight: bold;
 }

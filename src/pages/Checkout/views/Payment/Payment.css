@@ -1,0 +1,22 @@
+.payment-providers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2em;
+    margin-bottom: 1em;
+}
+
+.payment-providers > div {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 3px;;
+    display: flex;
+    padding: 4em 1em;
+}
+
+.payment-providers > div img {
+    margin: auto;
+}
+
+.payment-providers > div.payment-selected {
+    border: 5px solid #5A85F2;
+}

@@ -1,0 +1,18 @@
+.checkout-form input {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: .75em;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+}
+
+.checkout-form .inner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+}
+
+.checkout-form h2 {
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+}

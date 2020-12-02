@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import Logo from '../../assets/logo.svg';
 import {Link} from 'react-router-dom';
 
 const Header = (props) => {
+
     return (
        <header className="header">
            <div className="ml-20">
@@ -43,10 +44,11 @@ const Header = (props) => {
                                 Sign in
                             </Link>
                         </li>
-                        <li>
+                        <li className="cart">
                             <Link to="/checkout">
                                 Cart
                             </Link>
+                            <span><span>{props.cartItemsLength}</span></span>
                         </li>
                     </ul>
                 </div>

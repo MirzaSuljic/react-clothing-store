@@ -2,7 +2,7 @@ import React from 'react';
 
 const CartLayout = (props) => {
     return (
-            <div className="main">
+            <div>
                 {props.children}
             </div>
     )

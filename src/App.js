@@ -8,7 +8,7 @@ import MainLayout from './Layouts/MainLayout';
 import CartLayout from './Layouts/CartLayout'; 
 import HomepageLayout from './Layouts/HomepageLayout';
 import Women from './pages/Women/Women';
-import WomenDetail from './pages/WomenDetail/WomenDetail';
+import Details from './pages/Details/Details';
 import Men from './pages/Men/Men';
 import Sale from './pages/Sale/Sale';
 import SignIn from './pages/SignIn/SignIn';
@@ -52,14 +52,14 @@ function App() {
               <Women apiData={apiData} />
             </MainLayout>
           )}/>
+            <Route path="/men" render={()=>(
+               <MainLayout cartItemsLength={cartItemsLength}>
+                 <Men apiData={apiData}/>
+               </MainLayout>
+             )}/>
            <Route path="/detail/:id" render={(match)=>(
             <MainLayout cartItemsLength={cartItemsLength}>
-              <WomenDetail apiData={apiData} match={match} updateCartItemsLength={updateCartItemsLength}/>
-            </MainLayout>
-          )}/>
-           <Route path="/men" render={()=>(
-            <MainLayout cartItemsLength={cartItemsLength}>
-              <Men/>
+              <Details apiData={apiData} match={match} updateCartItemsLength={updateCartItemsLength}/>
             </MainLayout>
           )}/>
            <Route path="/sales" render={()=>(

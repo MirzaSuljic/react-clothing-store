@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import './WomenDetail.css';
+import './Details.css';
 
-class WomenDetail extends Component {
+class Details extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            api: this.props.apiData.api,
+            apiMen: this.props.apiData.men,
+            apiWomen: this.props.apiData.women,
             details: this.props.apiData.api.find(data => data.id == this.props.match.match.params.id),
             currentPreviewImage: 0
         };
@@ -86,4 +87,4 @@ class WomenDetail extends Component {
     }
 }
 
-export default WomenDetail;
+export default Details;

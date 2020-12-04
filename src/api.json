@@ -1,5 +1,5 @@
 {
-    "api": [
+    "women": [
         {
             "id":"1",
              "images": [
@@ -56,5 +56,63 @@
             "discountedPrice": "25",
             "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
         } 
-    ]
+    ],
+    "men": [
+      {
+          "id":"1",
+           "images": [
+               "/app001prod1.jpg",
+               "/app001prod1.jpg",
+               "/app001prod1.jpg",
+               "/app001prod1.jpg",
+               "/app001prod1.jpg"
+            ],
+          "title": "Sample Konfabulator Widget 1",
+          "price": "25",
+          "discountedPrice": "20",
+          "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+      },  
+      {
+          "id":"2",
+           "images": [
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg"
+            ],
+          "title": "Sample Konfabulator Widget 2",
+          "price": "80",
+          "discountedPrice": "80",
+          "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Proin eget tortor risus.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
+      },
+      {
+          "id":"3",
+           "images": [
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg"
+            ],
+          "title": "Sample Konfabulator Widget 3",
+          "price": "55",
+          "discountedPrice": "55",
+          "description": "Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },  
+      {
+          "id":"4",
+           "images": [
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg",
+              "/app001prod1.jpg"
+            ],
+          "title": "Sample Konfabulator Widget 4",
+          "price": "35",
+          "discountedPrice": "25",
+          "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
+      } 
+  ]
 }

@@ -18,7 +18,7 @@ class Women extends Component {
             <div> 
                 <span className="title">Women</span>
             <div className="women">
-           {this.props.apiData.api.map(women => {
+           {this.props.apiData.women.map(women => {
                return (
                    <div key={women.id}>
                        <Link to={`/detail/${women.id}`}>

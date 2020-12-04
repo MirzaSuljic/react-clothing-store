@@ -34,3 +34,34 @@
     padding-right: .25em;
     color: red;
 }
+
+@media screen and (max-width: 1024px) {
+    .women {
+        height: 1091px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin: 5% auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .women {
+        height: 1091px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        margin: 5% auto;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .women {
+        height: 1091px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin: 5% auto;
+    }
+  }

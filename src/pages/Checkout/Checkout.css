@@ -1,6 +1,6 @@
 .checkout {
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 
 .checkout-views {

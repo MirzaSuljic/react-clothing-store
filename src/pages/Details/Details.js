@@ -6,9 +6,8 @@ class Details extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            apiMen: this.props.apiData.men,
-            apiWomen: this.props.apiData.women,
-            details: this.props.apiData.api.find(data => data.id == this.props.match.match.params.id),
+            api: this.props.apiData.api,
+            details: this.props.apiData.api.find(data => data.id === this.props.match.match.params.id),
             currentPreviewImage: 0
         };
 
@@ -51,7 +50,7 @@ class Details extends Component {
                             {details.images.map((image, i) => {
                                 return (
                                     <div key={i} className={this.state.currentPreviewImage === i ? 'selected-preview-image' : ''} onClick={() => { this.selectPreviewImage(i) }}>
-                                        <img src={image} />
+                                        <img src={image}  alt=""/>
                                     </div>
                                 );
                             })}
@@ -61,15 +60,15 @@ class Details extends Component {
                         <h1>{details.title}</h1>
                         <p>${details.price}</p>
                         <p>{details.description}</p>
-                        <button onClick={this.addToCart}>Add to Cart</button>
+                        <button className="view-button-details" onClick={this.addToCart}>Add to Cart</button>
                         <p>{details.description}</p>
                     </div>
                 </div>
                 <div className="details-bottom-section">
                     <div><h2>You might also like</h2></div>
-                    {this.state.api.filter(item => item.id !== details.id).map(women => {
+                    {this.state.api.filter(item => item.gender === details.gender && item.id !== details.id).map((women, i) => {
                         return (
-                            <div key={women.id}>
+                            <div key={i}>
                                 <Link to={`/detail/${women.id}`}>
                                 <div>
                                         <img src={women.images[0]} alt="" />

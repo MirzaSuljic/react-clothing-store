@@ -14,6 +14,10 @@ class Checkout extends Component {
             paymentProvider: '',
             cartItems: JSON.parse(localStorage.getItem('cart')) || [],
             tax: 81,
+            // validation:{
+            //     required:true
+            // },
+            // valid: false,
           email: '',
           firstName: '',
           lastName: '',
@@ -30,6 +34,13 @@ class Checkout extends Component {
           this.getInformation = this.getInformation.bind(this);
           this.getPaymentProvider = this.getPaymentProvider.bind(this);
       }
+    //   checkValidity(value, rules){
+    //       let isValid = false;
+    //     if(rules.required){
+    //         isValid = value.trim() !== '';
+    //     }
+    //     return isValid;
+    //   }
 
       getCurrentView() {
           let view;

@@ -18,7 +18,7 @@ class Men extends Component {
             <div> 
                 <span className="title">Men</span>
             <div className="men">
-           {this.props.apiData.men.map(men => {
+           {this.props.apiData.api.filter(data => data.gender === 'm').map(men => {
                return (
                    <div key={men.id}>
                        <Link to={`/detail/${men.id}`}>

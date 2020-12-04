@@ -36,10 +36,10 @@ class Confirm extends Component {
                 paymentProvider = 'Stripe'
                 break;
             case 'apple-pay':
-                paymentProvider = 'Apple Pay'
+                paymentProvider = 'ApplePay'
                 break;
             case 'klarna':
-                paymentProvider = 'klarna'
+                paymentProvider = 'Klarna'
                 break;
             default:
                 break;

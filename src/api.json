@@ -1,118 +1,124 @@
 {
-    "women": [
-        {
-            "id":"1",
-             "images": [
-                 "/app001prod1.jpg",
-                 "/app001prod1.jpg",
-                 "/app001prod1.jpg",
-                 "/app001prod1.jpg",
-                 "/app001prod1.jpg"
-              ],
-            "title": "Sample Konfabulator Widget 1",
-            "price": "25",
-            "discountedPrice": "20",
-            "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-        },  
-        {
-            "id":"2",
-             "images": [
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg"
-              ],
-            "title": "Sample Konfabulator Widget 2",
-            "price": "80",
-            "discountedPrice": "80",
-            "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Proin eget tortor risus.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
-        },
-        {
-            "id":"3",
-             "images": [
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg"
-              ],
-            "title": "Sample Konfabulator Widget 3",
-            "price": "55",
-            "discountedPrice": "55",
-            "description": "Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        },  
-        {
-            "id":"4",
-             "images": [
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg",
-                "/app001prod1.jpg"
-              ],
-            "title": "Sample Konfabulator Widget 4",
-            "price": "35",
-            "discountedPrice": "25",
-            "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
-        } 
-    ],
-    "men": [
+    "api": [
       {
-          "id":"1",
-           "images": [
-               "/app001prod1.jpg",
-               "/app001prod1.jpg",
-               "/app001prod1.jpg",
-               "/app001prod1.jpg",
-               "/app001prod1.jpg"
-            ],
-          "title": "Sample Konfabulator Widget 1",
-          "price": "25",
-          "discountedPrice": "20",
-          "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+        "id":"1",
+         "images": [
+          "/app002prod1.svg",
+          "/app001prod(7).svg",
+          "/app001prod(8).svg",
+          "/app001prod(9).svg",
+          "/app001prod(10).svg"
+          ],
+        "title": "Sample Konfabulator Widget 1",
+        "price": "25",
+        "discountedPrice": "20",
+        "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+        "gender": "w"
       },  
       {
           "id":"2",
-           "images": [
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg"
+          "images": [
+            "/app003prod1.svg",
+            "/app001prod(7).svg",
+            "/app001prod(8).svg",
+            "/app001prod(9).svg",
+            "/app001prod(10).svg"
             ],
           "title": "Sample Konfabulator Widget 2",
           "price": "80",
           "discountedPrice": "80",
-          "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Proin eget tortor risus.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
+          "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Proin eget tortor risus.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+          "gender": "w"
       },
       {
           "id":"3",
-           "images": [
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg"
+          "images": [
+            "/app004prod1.svg",
+            "/app001prod(7).svg",
+            "/app001prod(8).svg",
+            "/app001prod(9).svg",
+            "/app001prod(10).svg"
             ],
           "title": "Sample Konfabulator Widget 3",
           "price": "55",
           "discountedPrice": "55",
-          "description": "Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          "description": "Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "gender": "w"
       },  
       {
           "id":"4",
-           "images": [
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg",
-              "/app001prod1.jpg"
+          "images": [
+            "/app005prod1.svg",
+            "/app001prod(7).svg",
+            "/app001prod(8).svg",
+            "/app001prod(9).svg",
+            "/app001prod(10).svg"
             ],
           "title": "Sample Konfabulator Widget 4",
           "price": "35",
           "discountedPrice": "25",
-          "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
-      } 
+          "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+          "gender": "w"
+      },
+      {
+        "id":"5",
+        "images": [
+          "/men001prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg"
+          ],
+        "title": "Sample Konfabulator Widget 5",
+        "price": "25",
+        "discountedPrice": "20",
+        "description": "Quisque velit nisi, pretium ut lacinia in, elementum id enim.",
+        "gender": "m"
+    },  
+    {
+        "id":"6",
+        "images": [
+          "/men001prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg"
+          ],
+        "title": "Sample Konfabulator Widget 2",
+        "price": "80",
+        "discountedPrice": "80",
+        "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Proin eget tortor risus.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+        "gender": "m"
+    },
+    {
+        "id":"7",
+        "images": [
+          "/men001prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg"
+          ],
+        "title": "Sample Konfabulator Widget 6",
+        "price": "55",
+        "discountedPrice": "55",
+        "description": "Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "gender": "m"
+    },  
+    {
+        "id":"8",
+        "images": [
+          "/men001prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg",
+          "/men002prod1.svg"
+          ],
+        "title": "Sample Konfabulator Widget 7",
+        "price": "35",
+        "discountedPrice": "25",
+        "description": "Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+        "gender": "m"
+    } 
   ]
 }

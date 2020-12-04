@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Logo from '../../../../assets/logo.svg';
+import PayPal from '../../../../assets/paypal.svg';
+import Pay from '../../../../assets/pay.svg';
+import Stripe from '../../../../assets/stripe.svg';
+import Klarna from '../../../../assets/klarna.svg';
 import Arrow from '../../../../assets/arrow-right.svg';
 import {Link} from 'react-router-dom';
 import './Payment.css';
@@ -45,16 +49,16 @@ class Payment extends Component {
                     <h1>Payment provider</h1>
                     <div className="payment-providers">
                         <div className={this.state.selectedProvider === 'paypal' ? 'payment-selected' : ''} onClick={() => { this.selectProvider('paypal') }}>
-                            <img src={Logo} alt="logo"></img>
+                            <img src={PayPal} alt="PayPal"></img>
                         </div>
                         <div className={this.state.selectedProvider === 'stripe' ? 'payment-selected' : ''} onClick={() => { this.selectProvider('stripe') }}>
-                            <img src={Logo} alt="logo"></img>
+                            <img src={Stripe} alt="Stripe"></img>
                         </div>
                         <div className={this.state.selectedProvider === 'apple-pay' ? 'payment-selected' : ''} onClick={() => { this.selectProvider('apple-pay') }}>
-                            <img src={Logo} alt="logo"></img>
+                            <img src={Pay} alt="ApplePay"></img>
                         </div>
                         <div className={this.state.selectedProvider === 'klarna' ? 'payment-selected' : ''} onClick={() => { this.selectProvider('paklarnaypal') }}>
-                            <img src={Logo} alt="logo"></img>
+                            <img src={Klarna} alt="Klarna"></img>
                         </div>
                     </div>
                     <button className="view-button" type="button" onClick={this.goToNextStep}>Continue to Confirm</button>

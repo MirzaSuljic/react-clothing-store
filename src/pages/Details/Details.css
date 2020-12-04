@@ -41,3 +41,10 @@
 .details-bottom-section h3 {
     text-transform: uppercase;
 }
+
+.view-button-details {
+    border: 0;
+    padding: 1em 5em;
+    background-color: #595959;
+    color: white;
+}

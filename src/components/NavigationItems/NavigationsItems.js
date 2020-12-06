@@ -7,7 +7,7 @@ import './NavigationItems.css';
 const navigationItems = (props) => (
     // <ul className={classes.NavigationItems}>
     <div>
-            <div className="ml-20">
+            <div className="ml-20 NavigationItems">
                 <ul className="left-items">
                     <li>
                         <Link to="/women">

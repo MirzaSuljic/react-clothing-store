@@ -87,3 +87,13 @@
 .mt-10{
     margin-top:10%;
 }
+@media (max-width: 768px) {
+    .directory {
+        flex-direction: column;
+    }
+}
+/* @media (min-width: 500px) {
+    .DrawerToggle {
+        display: none;
+    }
+} */

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Logo from '../../assets/logo.svg';
 
 import './NavigationItems.css';
 
@@ -25,6 +26,11 @@ const navigationItems = (props) => (
                     </li>
                 </ul>
             </div>
+            <div className="logo">
+                <Link to="/">
+                    <img src={Logo} alt="logo"></img>
+                </Link>
+            </div>
             <div className="mr-20">
                 <div className="right-items">
                     <ul>
@@ -42,7 +48,7 @@ const navigationItems = (props) => (
                             <Link to="/checkout">
                                 Cart
                             </Link>
-                            {/* <span><span>{props.cartItemsLength}</span></span> */}
+                            <span><span>{props.cartItemsLength}</span></span>
                         </li>
                     </ul>
                 </div>

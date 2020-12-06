@@ -11,11 +11,7 @@ const Header = (props) => {
        <header className="header">
 
             <DrawerToggle clicked={props.drawerToggleClicked} />
-            <div className="logo">
-                <Link to="/">
-                    <img src={Logo} alt="logo"></img>
-                </Link>
-            </div>
+            
             <nav className="DesktopOnly">
                 <NavigationItems />
             </nav>

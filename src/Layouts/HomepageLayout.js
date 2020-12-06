@@ -20,11 +20,11 @@ class HomepageLayout extends Component {
     render () {
         return (
             <div className="fullHeight">
-                    <Header cartItemsLength={props.cartItemsLength}/>
+                    <Header cartItemsLength={this.props.cartItemsLength}/>
                     <SideDrawer
                             open={this.state.showSideDrawer}
                             closed={this.sideDrawerClosedHandler} />
-                    {props.children}
+                    {this.props.children}
                 
             </div>
         );

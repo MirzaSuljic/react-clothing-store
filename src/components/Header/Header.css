@@ -30,6 +30,9 @@
 .mr-20{
     margin-right: 20px;
 }
+.mr-10{
+    margin-right: 10%;
+}
 
 .left-items,
 .right-items {
@@ -41,9 +44,15 @@
 .left-item li {
      margin-right: 10px;
 }
-.logo {
+/* .logo {
     width: 66px;
     height: 21px;
+} */
+
+.logo {
+    width: 15%;
+    height: 27px;
+    margin: 0 20%;
 }
 
 ul,li{
@@ -63,7 +72,7 @@ li {
     text-transform: uppercase;
 } */
 
-li:active {
+a:active {
     background: #E01A1A;
   }
 
@@ -88,6 +97,15 @@ li:active {
       font-size: 10px;
   }
 
+  a {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: #000;
+}
+
   @media (max-width: 499px) {
     .DesktopOnly {
         display: none;
@@ -97,5 +115,9 @@ li:active {
 @media (min-width: 768px) {
     .logo-desktop {
         display: none;
+        width: 66px;
+        height: 21px;
+        margin: 3% 0;
     }
+       
   }

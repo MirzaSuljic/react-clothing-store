@@ -26,7 +26,7 @@ class Men extends Component {
                         className="item-men">
                             <img src={men.images[0]} alt="" />
                 <h3>{men.title}</h3>
-                <p>{men.price !== men.discountedPrice && <span className="discounted-price">${men.discountedPrice}</span>}<span className={men.price !== men.discountedPrice ? 'striketrough' : ''}>${men.price}</span></p>
+                <p className="price">{men.price !== men.discountedPrice && <span className="discounted-price">${men.discountedPrice}</span>}<span className={men.price !== men.discountedPrice ? 'striketrough' : ''}>${men.price}</span></p>
                     </div>
                    </Link>
                    </div>

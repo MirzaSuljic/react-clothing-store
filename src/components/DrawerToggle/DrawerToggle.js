@@ -40,7 +40,7 @@ const StyledBurger = styled.div`
   }
 `;
 
-const DrawerToggle = () => {
+const DrawerToggle = (props) => {
     const [open, setOpen] = useState(false)
     return (
       <>
@@ -49,7 +49,7 @@ const DrawerToggle = () => {
           <div />
           <div />
         </StyledBurger>
-        <NavigationItems open={open}/>
+        <NavigationItems open={open}  cartItemsLength={props.cartItemsLength}/>
       </>
     )
   }

@@ -33,7 +33,7 @@ const Directory = (props) => {
         // </div>
         <div>
             <div className="directory">
-                <div className="container mr-5">
+                <div className="container">
                     <Link to="/women">
                         <div className="mosaic">
                             <div className="mosaic__item">
@@ -43,6 +43,9 @@ const Directory = (props) => {
                                 <img src={ShopWomen2} alt="two"/>
                             </div>
                         </div>
+
+                            <div className="text-woman">Women</div>
+                            <div className="sale-woman"> Sale (Women)</div>
                     </Link>
                 </div>
                 <div className="container mt-10">
@@ -59,12 +62,12 @@ const Directory = (props) => {
                 </div>
             </div>
             <div>
-            <div className="container">
-                    <div className="mosaic">
-                        <div className="mosaic__item">
+            <div className="container-bottom">
+                    <div className="mosaic-bottom">
+                        <div className="mosaic__item-bottom">
                             <img src={Men1} alt="one"/>
                         </div>
-                        <div className="mosaic__item">
+                        <div className="mosaic__item-bottom">
                             <img src={Women2} alt="two"/>
                         </div>
                     </div>

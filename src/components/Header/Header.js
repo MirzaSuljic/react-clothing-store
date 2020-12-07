@@ -21,16 +21,19 @@ const Nav = styled.nav`
   }
 `
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <Nav>
-      <div className="logo-desktop">
-            <Link to="/">
-                <img src={Logo} alt="logo"></img>
-            </Link>
-        </div>
-      <DrawerToggle />
-    </Nav>
+       <header className="header">
+            <Nav>
+                <div className="logo-desktop">
+                        <Link to="/">
+                            <img src={Logo} alt="logo"></img>
+                        </Link>
+                    </div>
+                <DrawerToggle  cartItemsLength={props.cartItemsLength}/>
+
+            </Nav>
+        </header>
   )
 }
 

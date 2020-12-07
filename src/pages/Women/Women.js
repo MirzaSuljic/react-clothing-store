@@ -26,10 +26,11 @@ class Women extends Component {
                         className="item-women">
                             <img src={women.images[0]} alt="" />
                 <h3>{women.title}</h3>
-                <p>{women.price !== women.discountedPrice && <span className="discounted-price">${women.discountedPrice}</span>}<span className={women.price !== women.discountedPrice ? 'striketrough' : ''}>${women.price}</span></p>
+                    <p className="price">{women.price !== women.discountedPrice && <span className="discounted-price">${women.discountedPrice}</span>}<span className={women.price !== women.discountedPrice ? 'striketrough' : ''}>${women.price}</span></p>
+              
                     </div>
-                   </Link>
-                   </div>
+                </Link>
+            </div>
                );
            })}
             </div>

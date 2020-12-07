@@ -29,6 +29,10 @@ li {
     list-style-type: none;
     margin-right: 10px;
 }
+ul{
+    list-style-type: none;
+    display: flex;
+}
 /* a{
     font-size: 18px;
     line-height: 1;

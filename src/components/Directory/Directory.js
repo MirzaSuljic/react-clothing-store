@@ -10,30 +10,10 @@ import './Directory.css';
 
 const Directory = (props) => {
     return (
-       
-
-        // <div className="directory">
-        //     <Link to="/women">
-        //         <div
-        //         className="item"
-        //         style={{
-        //             backgroundImage:`url(${ShopWomen})`
-        //         }}>
-            
-        //         </div>
-        //     </Link>
-        //     <Link to="/men">
-        //         <div
-        //         className="item"
-        //         style={{
-        //             backgroundImage:`url(${ShopMen})`
-        //         }}>
-        //         </div>
-        //     </Link>
-        // </div>
         <div>
+            <div className="main-page">
             <div className="directory">
-                <div className="container">
+                <div className="container mr-10px">
                     <Link to="/women">
                         <div className="mosaic">
                             <div className="mosaic__item">
@@ -43,9 +23,9 @@ const Directory = (props) => {
                                 <img src={ShopWomen2} alt="two"/>
                             </div>
                         </div>
-
-                            <div className="text-woman">Women</div>
-                            <div className="sale-woman"> Sale (Women)</div>
+                        <div className="text-woman">Women</div>
+                        <div className="sale-woman"> <span className="sale">Sale</span> <span>(Women)</span></div>
+                       
                     </Link>
                 </div>
                 <div className="container mt-10">
@@ -54,10 +34,13 @@ const Directory = (props) => {
                         <div className="mosaic__item">
                             <img src={ShopMen1} alt="one"/>
                         </div>
+                        <div className="text-mens">Men</div>
                         <div className="mosaic__item2">
                             <img src={ShopMen2} alt="two"/>
                         </div>
                     </div>
+                    <div className="sale-men"> <span className="sale">Sale</span> <span>(Men)</span></div>
+                    
                     </Link>
                 </div>
             </div>
@@ -73,6 +56,7 @@ const Directory = (props) => {
                     </div>
                 </div>
 
+            </div>
             </div>
         </div>
     )

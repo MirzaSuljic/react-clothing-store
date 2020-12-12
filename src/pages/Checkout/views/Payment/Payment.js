@@ -41,9 +41,9 @@ class Payment extends Component {
                     </div>
                     <div className="tab-links">
                         <div className="text-links mr-15">Information</div>
-                        <div className="mr-15"> <img src={Arrow} alt="Arrow"></img></div>
+                        <div className="mr-15"> <img className="img" src={Arrow} alt="Arrow"></img></div>
                         <div className="text-links mr-15 tab-link-active">Payment</div>
-                        <div className="mr-15"> <img src={Arrow} alt="Arrow"></img></div>
+                        <div className="mr-15"> <img className="img" src={Arrow} alt="Arrow"></img></div>
                         <div className="text-links mr-15">Confirm</div>
                     </div>
                     <h1>Payment provider</h1>

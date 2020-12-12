@@ -20,3 +20,8 @@
 .payment-providers > div.payment-selected {
     border: 5px solid #5A85F2;
 }
+
+.view-button {
+    
+    width: 50%;
+}

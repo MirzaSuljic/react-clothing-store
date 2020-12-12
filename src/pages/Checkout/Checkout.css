@@ -23,14 +23,16 @@
 }
 
 .logo1 {
-    text-align: center;
+    width: 66px;
+    margin: 0 auto;
 }
 
 .tab-links {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 3em 0 5em 0;
+    /* justify-content: center; */
+    margin: 3em auto 5em auto;
+    width: 50%;
 }
 
 .tab-links .text-links {
@@ -91,4 +93,7 @@
     align-items: center;
     padding-top: 1em;
     font-weight: bold;
+}
+img.img {
+    height: 13px;
 }

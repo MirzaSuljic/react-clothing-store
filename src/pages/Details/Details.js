@@ -60,7 +60,9 @@ class Details extends Component {
                         <h1>{details.title}</h1>
                         <p>${details.price}</p>
                         <p>{details.description}</p>
+                        <Link to={`/checkout`}>
                         <button className="view-button-details" onClick={this.addToCart}>Add to Cart</button>
+                        </Link>
                         <p>{details.description}</p>
                     </div>
                 </div>

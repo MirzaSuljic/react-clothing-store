@@ -19,7 +19,8 @@
 
 .checkout-cart-info {
     flex: 1;
-    padding: 4em;
+    padding: 2em;
+    height: auto;
 }
 
 .logo1 {

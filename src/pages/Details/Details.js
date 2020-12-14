@@ -11,10 +11,13 @@ class Details extends Component {
             currentPreviewImage: 0,
             cartItems: JSON.parse(localStorage.getItem('cart')) || [],
             tax: 81,
+            showCart: false,
         };
 
         this.selectPreviewImage = this.selectPreviewImage.bind(this);
         this.addToCart = this.addToCart.bind(this);
+
+    
       }
 
       selectPreviewImage(index) {
@@ -39,6 +42,17 @@ class Details extends Component {
             this.setState({cartItems: cartItems});
        
         localStorage.setItem('cart', JSON.stringify(cartItems));
+        if (typeof(Storage) ) {
+            this.showCart();
+
+        }
+        // this.refresh();
+
+            
+      }
+      showCart(){
+        this.setState({showCart:true});
+        
       }
       refresh(){
         window.location.reload(false);
@@ -69,49 +83,54 @@ class Details extends Component {
                             <h1>{details.title}</h1>
                             <p>${details.price}</p>
                             <p>{details.description}</p>
-                            <div onClick={this.refresh}>
-                             <button className="view-button-details" onClick={this.addToCart}>Add to Cart</button>
+                            <div onClick={this.addToCart}>
+                             <button className="view-button-details">Add to Cart</button>
                             </div>
                             <p>{details.description}</p>
                         </div>
                     </div>
-                    <div className="details-cart-info">
-                        <h2>Cart</h2>
-                        <ul className="cart-items">
-                            {this.state.cartItems.map((item, i) => {
-                                return (
-                                    <li key={i}>
-                                        <div className="cart-item-image" style={{backgroundImage: `url(${item.images[0]})`}}></div>
-                                        <div>
-                                            <h3>{item.title}</h3>
-                                            <p>${item.price} x {item.quantity}</p>
-                                        </div>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                        <div className="checkout-totals">
-                            <div>
-                                <div>Subtotal</div>
-                                <div>${subtotal}</div>
+                    {!this.state.showCart ? (
+                        null
+                        
+                    ) : (
+                        <div className="details-cart-info" >
+                            <h2>Cart</h2>
+                            <ul className="cart-items">
+                                {this.state.cartItems.map((item, i) => {
+                                    return (
+                                        <li key={i}>
+                                            <div className="cart-item-image" style={{backgroundImage: `url(${item.images[0]})`}}></div>
+                                            <div>
+                                                <h3>{item.title}</h3>
+                                                <p>${item.price} x {item.quantity}</p>
+                                            </div>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                            <div className="checkout-totals">
+                                <div>
+                                    <div>Subtotal</div>
+                                    <div>${subtotal}</div>
+                                </div>
+                                <div>
+                                    <div>Taxes</div>
+                                    <div>${this.state.tax}</div>
+                                </div>
                             </div>
-                            <div>
-                                <div>Taxes</div>
-                                <div>${this.state.tax}</div>
+                            <div className="checkout-total">
+                                <div>Total</div>
+                                <div>${subtotal + this.state.tax}</div>
                             </div>
-                        </div>
-                        <div className="checkout-total">
-                            <div>Total</div>
-                            <div>${subtotal + this.state.tax}</div>
-                        </div>
-                        <div className="mt-40">
-                            <Link to={`/checkout`}>
-                                <button className="view-button-details" onClick={this.addToCart}>Checkout</button>
-                            </Link>
+                            <div className="mt-40">
+                                <Link to={`/checkout`}>
+                                    <button className="view-button-details" onClick={this.addToCart}>Checkout</button>
+                                </Link>
 
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    )}
+                </div>         
                 <div className="details-bottom-section">
                     <div><h2>You might also like</h2></div>
                     {this.state.api.filter(item => item.gender === details.gender && item.id !== details.id).map((women, i) => {

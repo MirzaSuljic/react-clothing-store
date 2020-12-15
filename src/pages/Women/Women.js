@@ -24,7 +24,7 @@ class Women extends Component {
                                 <Link to={`/detail/${women.id}`}>
                                 {/* <div className="item-women"> */}
                                         <img className="img-women" src={women.images[0]} alt="" />
-                                <p>{women.title}</p>
+                                <p className="p_title">{women.title}</p>
                                 <p className="price">{women.price !== women.discountedPrice && <span className="discounted-price">${women.discountedPrice}</span>}<span className={women.price !== women.discountedPrice ? 'striketrough' : ''}>${women.price}</span></p>
                         
                                 {/* </div> */}

@@ -41,9 +41,19 @@ ul{
     text-transform: uppercase;
 } */
 
-li:active {
-    background: #E01A1A;
-  }
+li >a {
+    color: black;
+ }
+
+li > a:hover {
+    color: #E01A1A;
+}
+
+.active{
+    color:#E01A1A;
+    font-weight:bold;
+ }
+ 
 
   .cart {
       position: relative;

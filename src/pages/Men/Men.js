@@ -15,27 +15,29 @@ class Men extends Component {
 
     render(){
         return (
-            <div> 
-                <span className="title">Men</span>
-            <div className="men">
-           {this.props.apiData.api.filter(data => data.gender === 'm').map(men => {
-               return (
-                   <div key={men.id}>
-                       <Link to={`/detail/${men.id}`}>
-                    <div
-                        className="item-men">
-                            <img src={men.images[0]} alt="" />
-                <h3>{men.title}</h3>
-                <p className="price">{men.price !== men.discountedPrice && <span className="discounted-price">${men.discountedPrice}</span>}<span className={men.price !== men.discountedPrice ? 'striketrough' : ''}>${men.price}</span></p>
-                    </div>
-                   </Link>
-                   </div>
-               );
-           })}
-            </div>
+        <div>
+            <span className="title-m">Men</span>
+            <section className="just-a-flexbox">
+                    {this.props.apiData.api.filter(data => data.gender === 'm').map(men => {
+                        return (
+                            <div className="men" key={men.id}>
+                                <Link to={`/detail/${men.id}`}>
+                                {/* <div className="item-men"> */}
+                                        <img className="img-men" src={men.images[0]} alt="" />
+                                <p>{men.title}</p>
+                                <p className="price">{men.price !== men.discountedPrice && <span className="discounted-price">${men.discountedPrice}</span>}<span className={men.price !== men.discountedPrice ? 'striketrough' : ''}>${men.price}</span></p>
+                        
+                                {/* </div> */}
+                            </Link>
+                        </div>
+                        );
+                    })}
+            </section>
         </div>
+
+
+
         )
     }
 }
-
 export default Men;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 
 import styled from 'styled-components';
@@ -35,33 +35,29 @@ const Ul = styled.ul`
 `;
 
 const navigationItems = ({ open, cartItemsLength}) => {
-    // constructor(props) {
-    //     super(props);
-    // } 
-    // render(){
         return (
             <Ul open={open}>
                       <div className="left-items">
                         <ul>
                           <li>
-                              <Link to="/women">
+                              <NavLink exact to="/women" activeClassName="active">
                                   Women
-                              </Link>
+                              </NavLink>
                           </li>
                           <li>
-                          <Link to="/men">
+                          <NavLink exact to="/men" activeClassName="active">
                                   Men
-                              </Link>
+                              </NavLink>
                           </li>
                           <li>
-                          <Link to="/sales">
+                          <NavLink exact to="/sales" activeClassName="active">
                                   Sales
-                              </Link>
+                              </NavLink>
                           </li>
                           </ul>
                       </div>
                   <div className="logo mr-10">
-                      <Link to="/">
+                      <Link to="/" >
                           <img src={Logo} alt="logo"></img>
                       </Link>
                   </div>
@@ -69,19 +65,20 @@ const navigationItems = ({ open, cartItemsLength}) => {
                       <div className="right-items">
                           <ul>
                               <li>
-                                  <Link to="/registration">
+                              <NavLink exact to="/registration" activeClassName="active">
                                       Contact
-                                  </Link>
+                                  </NavLink>
                               </li>
                               <li>
-                                  <Link to="/sign-in">
+                                  
+                                  <NavLink exact to="/sign-in" activeClassName="active">
                                       Sign in
-                                  </Link>
+                                  </NavLink>
                               </li>
                               <li className="cart">
-                                  <Link to="/checkout">
+                                  <NavLink exact to="/checkout" activeClassName="active">
                                       Cart
-                                  </Link>
+                                  </NavLink>
                                   <span><span>{cartItemsLength}</span></span>
                               </li>
                           </ul>
@@ -89,64 +86,8 @@ const navigationItems = ({ open, cartItemsLength}) => {
                   </div>
             </Ul>
           )
-
-    // }
     
   }
 
-// const navigationItems = (props) => (
-//     // <ul className={classes.NavigationItems}>
-//     <div>
-//         <ul className="ml-20 NavigationItems">
-            // <div >
-            //     <ul className="left-items">
-            //         <li>
-            //             <Link to="/women">
-            //                 Women
-            //             </Link>
-            //         </li>
-            //         <li>
-            //         <Link to="/men">
-            //                 Men
-            //             </Link>
-            //         </li>
-            //         <li>
-            //         <Link to="/sales">
-            //                 Sales
-            //             </Link>
-            //         </li>
-            //     </ul>
-            // </div>
-            // <div className="logo">
-            //     <Link to="/">
-            //         <img src={Logo} alt="logo"></img>
-            //     </Link>
-            // </div>
-            // <div className="mr-20">
-            //     <div className="right-items">
-            //         <ul>
-            //             <li>
-            //                 <Link to="/registration">
-            //                     Contact
-            //                 </Link>
-            //             </li>
-            //             <li>
-            //                 <Link to="/sign-in">
-            //                     Sign in
-            //                 </Link>
-            //             </li>
-            //             <li className="cart">
-            //                 <Link to="/checkout">
-            //                     Cart
-            //                 </Link>
-            //                 <span><span>{props.cartItemsLength}</span></span>
-            //             </li>
-            //         </ul>
-            //     </div>
-            // </div>
-//         </ul>
-//         </div>
-//     // </ul>
-// );
 
 export default navigationItems;

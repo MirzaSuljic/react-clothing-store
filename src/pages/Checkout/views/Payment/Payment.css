@@ -21,7 +21,13 @@
     border: 5px solid #5A85F2;
 }
 
-.view-button {
+/* .view-button {
     
     width: 50%;
 }
+
+@media (max-width: 768px) {
+    .view-button {
+        width: 100%;
+    }
+} */

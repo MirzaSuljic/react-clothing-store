@@ -15,6 +15,18 @@
     padding: 1em 5em;
     background-color: #595959;
     color: white;
+    width: 315px;
+    height: 46px;
+}
+@media (max-width:380px) {
+    .view-button {
+        width: 270px;
+    }
+}
+@media (min-width:381px) and (max-width:768px) {
+    .view-button {
+        width: 330px;
+    }
 }
 
 .checkout-cart-info {
@@ -99,3 +111,4 @@
 img.img {
     height: 13px;
 }
+

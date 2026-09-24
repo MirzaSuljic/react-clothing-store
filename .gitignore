@@ -24,3 +24,11 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# env fajlovi (lozinke, JWT secret)
+.env
+**/.env
+
+# Licni planovi i vodici (ne idu na GitHub)
+Portfolio-Projekat-Plan.docx
+E-commerce-vodic*

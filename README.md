@@ -1,74 +1,82 @@
-# Netlify App
+# React Clothing Store
 
-https://rc-clothing-store.netlify.app/
+A demo fashion store: browse women's and men's collections, see what's on sale, pick a size, manage your bag and go through a three-step checkout.
 
-# Getting Started with Create React App
+Live (previous version): https://rc-clothing-store.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built with React 19, TypeScript, React Router 7 and Tailwind CSS 4, on Vite.
 
-## Available Scripts
+> Portfolio project. Not affiliated with COS, and no real orders or payments are made.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Collections**: Women, Men and Sale pages, sorted by Featured or by price. The sale page can be filtered by department.
+- **Product pages**: a full image gallery (it swipes on phones), size picker, details and material, and related products
+- **Bag**: a drawer opens when you add something; the bag page lets you change quantities or remove items. The count in the header updates right away, and the bag is saved in `localStorage`.
+- **Checkout**: Information → Payment → Review → Thank you, with field-level validation, a choice of PayPal, card, Apple Pay or Klarna, and an order summary next to each step
+- **Sign in and Contact** forms, validated the same way. They don't call a backend.
+- **Accessible**: keyboard focus is always visible, a skip link is provided, menus and the bag are real modal dialogs, errors are linked to their fields, and reduced-motion settings are respected
+- **Shareable URLs**: sorting and the sale filter are kept in the URL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Area | Choice |
+|---|---|
+| UI | React 19 with function components and hooks; state in `useReducer` and context |
+| Language | TypeScript (strict) |
+| Routing | React Router 7 |
+| Styling | Tailwind CSS 4 with a small custom theme in `src/index.css` |
+| Build | Vite |
+| Tests | Vitest |
+| Linting | ESLint 9 with typescript-eslint, react-hooks and react-refresh |
 
-### `npm test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requires Node.js 20.19+ or 22.12+.
 
-### `npm run build`
+```bash
+npm install
+npm run dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open http://localhost:5173.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Command | What it does |
+|---|---|
+| `npm run dev` | Starts the dev server |
+| `npm run build` | Type-checks and builds into `dist/` |
+| `npm run preview` | Serves the production build locally |
+| `npm test` | Runs the unit tests once |
+| `npm run test:watch` | Runs the tests on every change |
+| `npm run lint` | Lints the project |
 
-### `npm run eject`
+## Project structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+src/
+├── main.tsx              Entry point: router and cart provider
+├── App.tsx               Routes (old /sales, /registration and /detail/:id links redirect)
+├── index.css             Tailwind and theme tokens
+├── data/products.ts      The product catalogue
+├── types/                Product, CartLine, CartItem, ShippingDetails, …, one per file
+├── context/              Cart context and provider (saved to localStorage)
+├── hooks/                useCart, useForm
+├── utils/                Cart reducer, prices, sorting, validation, with tests
+├── components/
+│   ├── layout/           Header, mobile menu, footer, page layout
+│   ├── product/          Product card, grid, price, sort control
+│   ├── cart/             Bag drawer, cart line, quantity stepper, totals
+│   └── ui/               Drawer, form fields, icons, button styles
+└── pages/
+    ├── HomePage, CategoryPage, SalePage, ProductPage, CartPage
+    ├── SignInPage, ContactPage, NotFoundPage
+    └── checkout/         Checkout steps and order summary
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Product photos are in `public/products` and `public/editorial` as WebP.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`public/_redirects` sends every path to `index.html`, so client-side routes work on Netlify.
